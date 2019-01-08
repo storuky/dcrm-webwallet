@@ -3,6 +3,12 @@ module.exports = {
     host: "0.0.0.0",
     port: 8090,
     https: false,
-    hotOnly: false
+    hotOnly: false,
+    proxy: {
+      "/api/*": {
+        target: "https://api.dcrm.network",
+        secure: false
+      }
+    }
   }
 };
