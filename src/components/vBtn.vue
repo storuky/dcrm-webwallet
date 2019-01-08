@@ -12,7 +12,13 @@ export default {
       type: String,
       default: "default",
       validator(value) {
-        return ["default", "primary", "warn", "danger"].includes(value);
+        return [
+          "default",
+          "primary",
+          "primary-dark",
+          "warn",
+          "danger"
+        ].includes(value);
       }
     },
     size: {
@@ -29,7 +35,8 @@ export default {
     disabled: {
       type: Boolean,
       default: false
-    }
+    },
+    border: Boolean
   },
   computed: {
     classes() {
@@ -37,6 +44,10 @@ export default {
 
       if (this.disabled) {
         classes.push("disabled");
+      }
+
+      if (this.border) {
+        classes.push("border");
       }
 
       return classes.map(c => `v-btn--${c}`);
@@ -89,6 +100,11 @@ export default {
   background: #2f7cd7;
 }
 
+.v-btn--primary-dark {
+  background: white;
+  color: #004a7c;
+}
+
 .v-btn--warn {
   background: #ea4b40;
   color: white;
@@ -103,11 +119,18 @@ export default {
 }
 
 .v-btn--small {
+  font-size: 12px;
+  height: 28px;
+  padding: 4px 10px;
+  min-width: 66px;
 }
 
 .v-btn--normal {
 }
 
 .v-btn--lg {
+}
+.v-btn--border {
+  border: 1px solid #dddddd;
 }
 </style>

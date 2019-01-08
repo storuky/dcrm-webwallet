@@ -1,0 +1,37 @@
+.coin-icon {
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+}
+
+.coin-icon-btc {
+  background-image: url("./image/btc.svg");
+}
+
+.coin-icon-eth {
+  background-image: url("./image/eth.svg");
+}
+
+.coin-icon-fsn {
+  background-image: url("./image/fsn.svg");
+}
+
+.coin-icon-bnb {
+  background-image: url("./image/bnb.svg");
+}
+
+.coin-icon-mkr {
+  background-image: url("./image/mkr.svg");
+}
+
+.coin-icon-gusd {
+  background-image: url("./image/gusd.svg");
+}
+
+.coin-icon-ht {
+  background-image: url("./image/ht.svg");
+}
+
+.coin-icon-bnt {
+  background-image: url("./image/bnt.svg");
+}

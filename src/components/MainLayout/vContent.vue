@@ -1,18 +1,23 @@
 <template>
-  <section class="v-content">
+  <section class="v-content" :style="{background: background}">
     <slot></slot>
   </section>
 </template>
 
 <script>
 export default {
-  name: "vContent"
+  name: "vContent",
+  props: {
+    background: {
+      type: String,
+      default: "#eee"
+    }
+  }
 };
 </script>
 
 <style scoped>
 .v-content {
-  background: #eee;
   position: absolute;
   top: 92px;
   bottom: 65px;

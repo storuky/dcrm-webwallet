@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AuthorizedLayout v-if="wallet"/>
+    <AuthorizedLayout v-if="!wallet"/>
     <NotAuthorizedLayout v-else/>
   </div>
 </template>

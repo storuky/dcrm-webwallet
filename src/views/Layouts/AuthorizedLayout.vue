@@ -5,7 +5,7 @@
         <HeaderActions/>
       </template>
     </vHeader>
-    <vContent>
+    <vContent background="white">
       <Sidebar/>
       <div class="content-wrapper">
         <router-view/>

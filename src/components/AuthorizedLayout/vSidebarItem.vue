@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .sidebar-item {
-  height: 38px;
+  height: 45px;
   display: flex;
   align-items: center;
   padding-left: 15px;

@@ -41,8 +41,11 @@ h3 {
 .text-small {
   font-size: 14px;
 }
+.text-left {
+  text-align: left !important;
+}
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-red {
@@ -55,6 +58,10 @@ h3 {
 
 .text-gray {
   color: #999;
+}
+
+.text-lighter {
+  font-weight: lighter;
 }
 
 .next-step {
