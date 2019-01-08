@@ -1,8 +1,51 @@
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   color: #333;
+}
+
+hr {
+  overflow: visible;
+  border: none;
+  height: 2px;
+  background: #eee;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: normal;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-small {
+  font-size: 14px;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-gray {
+  color: #999;
+}
+
+.next-step {
+  margin-top: 50px;
+  width: 200px;
 }

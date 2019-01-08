@@ -1,11 +1,11 @@
 <template>
   <div class="welcome">
     <div class="welcome-actions">
-      <vBtn color="primary">
+      <vBtn color="primary" :to="{name: 'createWallet'}">
         <i class="create-wallet-icon"></i>
         <span>Create Wallet</span>
       </vBtn>
-      <vBtn>
+      <vBtn :to="{name: 'importWallet'}">
         <i class="import-wallet-icon"></i>
         <span>Import Wallet</span>
       </vBtn>
@@ -54,10 +54,10 @@ export default {
 }
 
 .create-wallet-icon {
-  background-image: url("../assets/image/create-wallet-white.svg");
+  background-image: url("../../assets/image/create-wallet-white.svg");
 }
 
 .import-wallet-icon {
-  background-image: url("../assets/image/import-wallet-blue.svg");
+  background-image: url("../../assets/image/import-wallet-blue.svg");
 }
 </style>

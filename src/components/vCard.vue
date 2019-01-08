@@ -19,7 +19,6 @@ export default {
 
 <style scoped>
 .v-card {
-  max-width: 970px;
   min-height: 200px;
   background: #fff;
   margin: 60px auto;

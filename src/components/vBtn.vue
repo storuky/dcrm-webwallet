@@ -1,5 +1,5 @@
 <template>
-  <div class="v-btn" :class="classes">
+  <div class="v-btn" :class="classes" @click="click">
     <slot></slot>
   </div>
 </template>
@@ -21,6 +21,10 @@ export default {
       validator(value) {
         return ["small", "normal", "large"].includes(value);
       }
+    },
+    to: {
+      type: [Object, String],
+      default: null
     }
   },
   computed: {
@@ -28,6 +32,14 @@ export default {
       const classes = [this.color, this.size].map(c => `v-btn--${c}`);
 
       return classes;
+    }
+  },
+  methods: {
+    click(event) {
+      this.$emit("click", event);
+      if (this.to) {
+        this.$router.push(this.to);
+      }
     }
   }
 };
