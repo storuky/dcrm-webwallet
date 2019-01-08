@@ -3,11 +3,42 @@
     <vTitle>
       <div>Receive / Send</div>
     </vTitle>
+    <div class="transfer__content">
+      <vTabs :tabs="tabs" v-model="activeTab"></vTabs>
+      <hr>
+
+      <div class="transfer__tabs-content">
+        <Receive v-if="activeTab == 0"/>
+        <Send v-if="activeTab == 1"/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Receive from "./Transfer/Receive";
+import Send from "./Transfer/Send";
+
 export default {
-  name: "Transfer"
+  name: "Transfer",
+  components: {
+    Receive,
+    Send
+  },
+  data() {
+    return {
+      activeTab: 0,
+      tabs: [{ name: "Receive" }, { name: "Send" }]
+    };
+  }
 };
 </script>
+
+<style scoped>
+.transfer__content {
+  padding: 15px 55px;
+}
+.transfer__tabs-content {
+  margin-top: 30px;
+}
+</style>

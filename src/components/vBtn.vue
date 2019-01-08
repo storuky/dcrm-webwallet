@@ -14,6 +14,7 @@ export default {
       validator(value) {
         return [
           "default",
+          "default-dark",
           "primary",
           "primary-dark",
           "warn",
@@ -100,9 +101,14 @@ export default {
   background: #2f7cd7;
 }
 
-.v-btn--primary-dark {
+.v-btn--default-dark {
   background: white;
   color: #004a7c;
+}
+
+.v-btn--primary-dark {
+  background: #285b7e;
+  color: white;
 }
 
 .v-btn--warn {

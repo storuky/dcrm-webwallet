@@ -5866,6 +5866,10 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
+qrcodejs2@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/qrcodejs2/-/qrcodejs2-0.0.2.tgz#465afe5e39f19facecb932c11f7a186109146ae1"
+
 qs@6.5.2, qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -7369,6 +7373,10 @@ vue-eslint-parser@^4.0.2:
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
+
+vue-js-modal@^1.3.28:
+  version "1.3.28"
+  resolved "https://registry.yarnpkg.com/vue-js-modal/-/vue-js-modal-1.3.28.tgz#fc83d8884802b22d6eb2ba5f5c4f7ec33d71a766"
 
 vue-loader@^15.4.2:
   version "15.5.1"

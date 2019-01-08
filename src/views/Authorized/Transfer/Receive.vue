@@ -1,0 +1,61 @@
+<template>
+  <div class="transfer-receive">
+    <label class="label">FSN Receiving Address</label>
+    <input type="text" v-model="address" disabled class="input input-address">
+
+    <div class="receive-actions">
+      <vBtn color="primary" @click="qrCode">
+        <vIcon name="qr-code"/>
+        <span>Show QR code</span>
+      </vBtn>
+      <vBtn color="primary-dark" @click="copy">
+        <vIcon name="copy"/>
+        <span>Copy clipboard</span>
+      </vBtn>
+    </div>
+
+    <hr>
+  </div>
+</template>
+
+<script>
+import { copyToClp } from "@/lib/utils";
+import QrCode from "./QrCode";
+
+export default {
+  name: "TransferReceive",
+  computed: {
+    address() {
+      return this.$store.getters["wallet/address"] || "address";
+    }
+  },
+  methods: {
+    copy() {
+      copyToClp(this.address);
+    },
+    qrCode() {
+      this.$modal.show(
+        QrCode,
+        {
+          address: this.address
+        },
+        { scrollable: true, height: "auto" }
+      );
+    }
+  }
+};
+</script>
+
+
+<style scoped>
+.receive-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.receive-actions > * {
+  margin: 0 10px;
+}
+</style>

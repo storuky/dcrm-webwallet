@@ -40,8 +40,8 @@
               <div class="text-gray text-lighter">$ 0.00</div>
             </td>
             <td class="table-actions w0">
-              <vBtn color="primary-dark" border size="small">Receive</vBtn>
-              <vBtn color="primary-dark" border size="small">Send</vBtn>
+              <vBtn color="default-dark" border size="small">Receive</vBtn>
+              <vBtn color="default-dark" border size="small">Send</vBtn>
             </td>
           </tr>
         </tbody>

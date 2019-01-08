@@ -1,6 +1,7 @@
 import Vue from "vue";
 
 import vIcon from "./vIcon";
+import vTabs from "./vTabs";
 import vBtn from "./vBtn";
 import vInput from "./vInput";
 import vCard from "./vCard";
@@ -11,6 +12,7 @@ import vHeader from "./MainLayout/vHeader";
 import vFooter from "./MainLayout/vFooter";
 
 Vue.component("vIcon", vIcon);
+Vue.component("vTabs", vTabs);
 Vue.component("vContent", vContent);
 Vue.component("vHeader", vHeader);
 Vue.component("vFooter", vFooter);

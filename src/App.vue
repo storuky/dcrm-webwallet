@@ -2,6 +2,8 @@
   <div id="app">
     <AuthorizedLayout v-if="!wallet"/>
     <NotAuthorizedLayout v-else/>
+
+    <modals-container/>
   </div>
 </template>
 
