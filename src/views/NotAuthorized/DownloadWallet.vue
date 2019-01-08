@@ -12,7 +12,10 @@
         <br>
         <div>
           <p>
-            <span class="text-red">* If you can't download, please disable AdBlock for this site.</span>
+            <span class="text-red">
+              * If you can't download, please disable
+              <b>AdBlock</b> for this site.
+            </span>
             <br>**Do not lose it!** It cannot be recovered if you lose it.
             <br>**Do not share it!** Your funds will be stolen if you use this file on a malicious/phishing site.
             <br>**Make a backup!** Secure it like the millions of dollars it may one day be worth.

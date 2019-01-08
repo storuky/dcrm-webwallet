@@ -1,7 +1,7 @@
 <template>
-  <div class="v-btn" :class="classes" @click="click">
+  <button class="v-btn" :class="classes" @click="click">
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -64,6 +64,7 @@ export default {
   cursor: pointer;
   padding: 0 35px;
   font-weight: lighter;
+  border: none;
 }
 
 .v-btn:not(.v-btn--disabled):hover {

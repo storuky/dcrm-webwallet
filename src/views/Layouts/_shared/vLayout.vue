@@ -2,19 +2,19 @@
   <div class="main-layout">
     <vHeader></vHeader>
     <vContent>
-      <router-view/>
+      <slot></slot>
     </vContent>
     <vFooter></vFooter>
   </div>
 </template>
 
 <script>
-import vHeader from "./MainLayout/vHeader";
-import vFooter from "./MainLayout/vFooter";
-import vContent from "./MainLayout/vContent";
+import vHeader from "./vHeader";
+import vFooter from "./vFooter";
+import vContent from "./vContent";
 
 export default {
-  name: "MainLayout",
+  name: "vLayout",
   components: {
     vHeader,
     vFooter,

@@ -14,20 +14,11 @@
         </div>
 
         <div class="import-wallet__tabs-content">
-          <div v-if="activeTab == 'keystore'" class="import-wallet__keystore">
-            <h3>Select Your Wallet File</h3>
-            <label class="import-wallet__fileupload">
-              <span>SELECT WALLET FILE...</span>
-              <input class="hidden" type="file">
-            </label>
+          <div v-if="activeTab == 'keystore'">
+            <Keystore/>
           </div>
-          <div v-if="activeTab == 'private_key'" class="import-wallet__private-key">
-            <h3>Paste Your Private Key</h3>
-            <br>
-            <vInput v-model="password" placeholder="Enter a Private Key" type="password"/>
-            <br>
-            <br>
-            <vBtn color="primary" v-if="password">Unlock</vBtn>
+          <div v-if="activeTab == 'private_key'">
+            <PrivateKey/>
           </div>
         </div>
       </div>
@@ -43,18 +34,29 @@
 </template>
 
 <script>
+import Keystore from "./ImportWallet/Keystore";
+import PrivateKey from "./ImportWallet/PrivateKey";
+
 export default {
   name: "ImportWallet",
+  components: {
+    Keystore,
+    PrivateKey
+  },
   data() {
     return {
       activeTab: "keystore",
       password: null,
+      passwordNeeded: null,
+      wallet: null,
+      walletJSON: null,
       tabs: [
         { value: "keystore", title: "Keystore / JSON File" },
         { value: "private_key", title: "Private Key" }
       ]
     };
-  }
+  },
+  methods: {}
 };
 </script>
 
@@ -116,7 +118,7 @@ export default {
   border: 2px solid #2f7cd7;
   width: 4px;
   height: 4px;
-  box-shadow: 0px 0px 10px #2f7cd7;
+  box-shadow: 0px 0px 0px 4px #2f7cd7;
   top: 8px;
   left: 4px;
 }
@@ -125,19 +127,5 @@ export default {
   text-align: center;
   max-width: 500px;
   margin: auto;
-}
-
-.import-wallet__fileupload {
-  position: relative;
-  text-align: center;
-  line-height: 33px;
-  background: #163a65;
-  cursor: pointer;
-  color: white;
-  padding: 10px 50px;
-}
-
-.import-wallet__fileupload:hover {
-  filter: brightness(110%);
 }
 </style>

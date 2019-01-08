@@ -3,16 +3,11 @@
     <vCard title="Create New Wallet">
       <hr>
 
-      <form class="create-wallet__form">
+      <form class="create-wallet__form" @submit.stop.prevent="generateWallet">
         <vInput v-model="password" placeholder="Enter a password" type="password"/>
         <br>
         <div class="text-red">* Do NOT forget to save this!</div>
-        <vBtn
-          @click="generateWallet"
-          color="primary"
-          class="next-step"
-          v-if="password.length>=9"
-        >Next step</vBtn>
+        <vBtn color="primary" class="next-step" v-if="password.length>=9">Next step</vBtn>
       </form>
 
       <div class="create-wallet__info">

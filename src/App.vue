@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <MainLayout/>
+    <AuthorizedLayout v-if="!wallet"/>
+    <NotAuthorizedLayout v-else/>
   </div>
 </template>
 
 <script>
-import MainLayout from "./views/Layouts/MainLayout";
+import AuthorizedLayout from "./views/Layouts/AuthorizedLayout";
+import NotAuthorizedLayout from "./views/Layouts/NotAuthorizedLayout";
 
 export default {
   name: "App",
   components: {
-    MainLayout
+    AuthorizedLayout,
+    NotAuthorizedLayout
+  },
+  computed: {
+    wallet() {
+      return this.$store.getters["wallet/wallet"];
+    }
   }
 };
 </script>
