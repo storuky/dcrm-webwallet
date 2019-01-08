@@ -25,20 +25,30 @@ export default {
     to: {
       type: [Object, String],
       default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     classes() {
-      const classes = [this.color, this.size].map(c => `v-btn--${c}`);
+      const classes = [this.color, this.size];
 
-      return classes;
+      if (this.disabled) {
+        classes.push("disabled");
+      }
+
+      return classes.map(c => `v-btn--${c}`);
     }
   },
   methods: {
     click(event) {
-      this.$emit("click", event);
-      if (this.to) {
-        this.$router.push(this.to);
+      if (!this.disabled) {
+        this.$emit("click", event);
+        if (this.to) {
+          this.$router.push(this.to);
+        }
       }
     }
   }
@@ -56,7 +66,7 @@ export default {
   font-weight: lighter;
 }
 
-.v-btn:hover {
+.v-btn:not(.v-btn--disabled):hover {
   filter: brightness(105%);
 }
 
@@ -69,7 +79,7 @@ export default {
   background: white;
 }
 
-.v-btn--default:hover {
+.v-btn--default:not(.v-btn--disabled):hover {
   filter: brightness(98%);
 }
 
@@ -79,7 +89,13 @@ export default {
 }
 
 .v-btn--warn {
-  background: #ed8c00;
+  background: #ea4b40;
+  color: white;
+}
+
+.v-btn--disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .v-btn--danger {

@@ -8,11 +8,18 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bs58check": "^2.1.2",
+    "crypto": "^1.0.1",
+    "ethereumjs-tx": "^1.3.7",
+    "ethereumjs-util": "^5.0.0",
     "normalize.css": "^8.0.1",
+    "scrypt.js": "^0.3.0",
     "typeface-open-sans": "^0.0.54",
+    "uuid": "^3.3.2",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "web3": "^1.0.0-beta.37"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",

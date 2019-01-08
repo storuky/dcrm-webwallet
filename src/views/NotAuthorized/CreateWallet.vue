@@ -7,7 +7,12 @@
         <vInput v-model="password" placeholder="Enter a password" type="password"/>
         <br>
         <div class="text-red">* Do NOT forget to save this!</div>
-        <vBtn color="primary" class="next-step" v-if="password">Next step</vBtn>
+        <vBtn
+          @click="generateWallet"
+          color="primary"
+          class="next-step"
+          v-if="password.length>=9"
+        >Next step</vBtn>
       </form>
 
       <div class="create-wallet__info">
@@ -27,12 +32,30 @@
 </template>
 
 <script>
+import Wallet from "@/lib/wallet";
+import { getBlob } from "@/lib/utils";
+
 export default {
   name: "CreateWallet",
   data() {
     return {
-      password: null
+      password: ""
     };
+  },
+  methods: {
+    generateWallet() {
+      const wallet = Wallet.generate(this.password);
+
+      const walletJSON = wallet.toV3(this.password, {
+        kdf: "scrypt",
+        n: 8192
+      });
+
+      const filename = wallet.getV3Filename();
+      const blob = getBlob({ str: walletJSON });
+
+      this.$router.push({ name: "downloadWallet", params: { blob, filename } });
+    }
   }
 };
 </script>

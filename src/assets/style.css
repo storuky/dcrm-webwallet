@@ -15,6 +15,14 @@ hr {
   background: #eee;
 }
 
+a {
+  text-decoration: none;
+}
+
+a.link {
+  text-decoration: underline;
+}
+
 p {
   line-height: 1.5;
 }
@@ -38,7 +46,11 @@ h3 {
 }
 
 .text-red {
-  color: red;
+  color: #c7254e;
+}
+
+.text-bg-pink {
+  background: #f9f2f4;
 }
 
 .text-gray {
