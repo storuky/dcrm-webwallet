@@ -48,6 +48,9 @@ export default {
 
 
 <style scoped>
+.transfer-receive {
+  padding: 25px;
+}
 .receive-actions {
   display: flex;
   align-items: center;

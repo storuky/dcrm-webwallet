@@ -40,8 +40,8 @@
               <div class="text-gray text-lighter">$ 0.00</div>
             </td>
             <td class="table-actions w0">
-              <vBtn color="default-dark" border size="small">Receive</vBtn>
-              <vBtn color="default-dark" border size="small">Send</vBtn>
+              <vBtn color="default-dark" border size="small" @click="receive(coin.symbol)">Receive</vBtn>
+              <vBtn color="default-dark" border size="small" @click="send(coin.symdol)">Send</vBtn>
             </td>
           </tr>
         </tbody>
@@ -51,6 +51,8 @@
 </template>
 
 <script>
+import Receive from "./Transfer/Receive";
+import Send from "./Transfer/Send";
 export default {
   name: "MyAssets",
   data() {
@@ -76,6 +78,24 @@ export default {
           coin.name.indexOf(this.query) != -1
         );
       });
+    },
+    receive(symbol) {
+      this.$modal.show(
+        Receive,
+        {
+          symbol
+        },
+        { scrollable: true, height: "auto" }
+      );
+    },
+    send(symbol) {
+      this.$modal.show(
+        Send,
+        {
+          symbol
+        },
+        { scrollable: true, height: "auto" }
+      );
     }
   }
 };

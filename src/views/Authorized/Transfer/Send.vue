@@ -32,6 +32,9 @@ export default {
 
 
 <style scoped>
+.transfer-send {
+  padding: 25px;
+}
 .send-actions {
   display: flex;
   align-items: center;
