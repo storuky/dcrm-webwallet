@@ -1,15 +1,15 @@
 <template>
   <footer class="v-footer">
     <a class="v-footer__item v-footer__link" href="https://fusion.org" target="_blank">
-      <img src="@/assets/image/logo-white.svg" width="61" height="16">
+      <vIcon name="logo-white" size="70"/>
     </a>
 
     <div class="v-footer__item">
       <a class="v-footer__link" href="https://github.com/FUSIONFoundation/dcrm-go" target="_blank">
-        <img src="@/assets/image/GIT.svg" width="16" height="16">
+        <vIcon name="git" size="18"/>
       </a>
       <a class="v-footer__link" href="https://gitter.im/FUSIONDC/" target="_blank">
-        <img src="@/assets/image/GIT2.svg" width="16" height="16">
+        <vIcon name="git2" size="18"/>
       </a>
     </div>
 
@@ -46,6 +46,7 @@ export default {
 
 .v-footer__item {
   margin: 0 15px;
+  text-align: center;
 }
 
 .v-footer__link {

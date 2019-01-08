@@ -1,16 +1,25 @@
 <template>
-  <vLayout>
-    <router-view/>
-  </vLayout>
+  <div class="main-layout">
+    <vHeader></vHeader>
+    <vContent>
+      <router-view/>
+    </vContent>
+    <vFooter></vFooter>
+  </div>
 </template>
 
 <script>
-import vLayout from "./_shared/vLayout";
-
 export default {
-  name: "NotAuthorizedLayout",
-  components: {
-    vLayout
-  }
+  name: "vLayout"
 };
 </script>
+
+<style scoped>
+.main-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>

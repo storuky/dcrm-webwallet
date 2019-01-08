@@ -1,11 +1,11 @@
 <template>
-  <div class="v-header">
+  <div class="v-title">
     <slot></slot>
   </div>
 </template>
 
 <style scoped>
-.v-header {
+.v-title {
   width: 100%;
   height: 88px;
   background: #f0f9ff;

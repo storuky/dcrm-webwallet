@@ -1,8 +1,8 @@
 <template>
   <div class="lilo">
-    <vHeader>
+    <vTitle>
       <div>Lockin / Lockout</div>
-    </vHeader>
+    </vTitle>
   </div>
 </template>
 

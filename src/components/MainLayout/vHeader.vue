@@ -5,7 +5,9 @@
         <img width="100%" src="@/assets/image/logo.svg">
       </router-link>
     </div>
-    <div class="v-header__right"></div>
+    <div class="v-header__right">
+      <slot name="left"></slot>
+    </div>
   </header>
 </template>
 
@@ -32,7 +34,7 @@ export default {
 }
 
 .v-header__logo {
-  width: 350px;
+  width: 300px;
   display: block;
 }
 

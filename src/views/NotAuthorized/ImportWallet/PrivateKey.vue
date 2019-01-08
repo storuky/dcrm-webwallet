@@ -29,7 +29,7 @@ export default {
 
       this.$store.dispatch("wallet/set", wallet);
 
-      this.$router.push("dashboard");
+      this.$router.push("/my-assets");
     },
     fixPkey(key) {
       if (key.indexOf("0x") === 0) {

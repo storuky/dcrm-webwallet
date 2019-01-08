@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard">
-    <vHeader>
+    <vTitle>
       <div>My Assets</div>
-    </vHeader>
+    </vTitle>
   </div>
 </template>
 

@@ -52,7 +52,7 @@ export default {
       );
 
       this.$store.dispatch("wallet/set", wallet);
-      this.$router.push("dashboard");
+      this.$router.push("/my-assets");
     }
   }
 };

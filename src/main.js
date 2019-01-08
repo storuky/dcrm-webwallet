@@ -5,6 +5,7 @@ import web3 from "./lib/lilo";
 
 import "typeface-open-sans";
 import "normalize.css";
+import "./assets/icons/style.css";
 import "./assets/style.css";
 
 import "./components";

@@ -1,64 +1,43 @@
 <template>
-  <vLayout>
-    <vSidebar>
-      <vSidebarItem to="/dashboard">
-        <i class="sidebar-icon icon-my-assets"></i>
-        <span>My Assets</span>
-      </vSidebarItem>
-      <vSidebarItem to="/transfer">
-        <i class="sidebar-icon icon-transfer"></i>
-        <span>Transfer</span>
-      </vSidebarItem>
-      <vSidebarItem to="/lilo">
-        <i class="sidebar-icon icon-lilo"></i>
-        <span>LILO</span>
-      </vSidebarItem>
-      <vSidebarItem to="dapp">
-        <i class="sidebar-icon icon-dapp"></i>
-        <span>DAPP</span>
-      </vSidebarItem>
-    </vSidebar>
-    <div class="content-wrapper">
-      <router-view/>
-    </div>
-  </vLayout>
+  <div class="main-layout">
+    <vHeader>
+      <template slot="left">
+        <HeaderActions/>
+      </template>
+    </vHeader>
+    <vContent>
+      <Sidebar/>
+      <div class="content-wrapper">
+        <router-view/>
+      </div>
+    </vContent>
+    <vFooter></vFooter>
+  </div>
 </template>
 
 <script>
-import vLayout from "./_shared/vLayout";
 import "@/components/AuthorizedLayout";
+import Sidebar from "./AuthorizedLayout/Sidebar";
+import HeaderActions from "./AuthorizedLayout/HeaderActions";
 
 export default {
   name: "AuthorizedLayout",
   components: {
-    vLayout
+    Sidebar,
+    HeaderActions
   }
 };
 </script>
 
 <style scoped>
+.main-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .content-wrapper {
   padding-left: 230px;
-}
-
-.sidebar-icon {
-  height: 15px;
-  width: 15px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.icon-my-assets {
-  background-image: url("../../assets/image/my-assets.svg");
-}
-
-.icon-transfer {
-  background-image: url("../../assets/image/transfer.svg");
-}
-.icon-lilo {
-  background-image: url("../../assets/image/lilo.svg");
-}
-.icon-dapp {
-  background-image: url("../../assets/image/dapp.svg");
 }
 </style>

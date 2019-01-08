@@ -1,8 +1,8 @@
 <template>
   <div class="transfer">
-    <vHeader>
+    <vTitle>
       <div>Receive / Send</div>
-    </vHeader>
+    </vTitle>
   </div>
 </template>
 

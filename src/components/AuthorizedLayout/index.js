@@ -1,9 +1,9 @@
 import Vue from "vue";
 
-import vHeader from "./vHeader";
+import vTitle from "./vTitle";
 import vSidebar from "./vSidebar";
 import vSidebarItem from "./vSidebarItem";
 
-Vue.component("vHeader", vHeader);
+Vue.component("vTitle", vTitle);
 Vue.component("vSidebar", vSidebar);
 Vue.component("vSidebarItem", vSidebarItem);

@@ -43,4 +43,27 @@ const getBlob = ({ mime = "text/json;charset=UTF-8", str }) => {
   return window.URL.createObjectURL(blob);
 };
 
-export { getBlob };
+function copyToClp(txt) {
+  txt = document.createTextNode(txt);
+  var m = document;
+  var w = window;
+  var b = m.body;
+  b.appendChild(txt);
+  if (b.createTextRange) {
+    var d = b.createTextRange();
+    d.moveToElementText(txt);
+    d.select();
+    m.execCommand("copy");
+  } else {
+    var d = m.createRange();
+    var g = w.getSelection;
+    d.selectNodeContents(txt);
+    g().removeAllRanges();
+    g().addRange(d);
+    m.execCommand("copy");
+    g().removeAllRanges();
+  }
+  txt.remove();
+}
+
+export { getBlob, copyToClp };

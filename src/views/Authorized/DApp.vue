@@ -1,8 +1,8 @@
 <template>
   <div class="dapp">
-    <vHeader>
+    <vTitle>
       <div>DAPP</div>
-    </vHeader>
+    </vTitle>
   </div>
 </template>
 

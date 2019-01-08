@@ -2,11 +2,11 @@
   <div class="welcome">
     <div class="welcome-actions">
       <vBtn color="primary" :to="{name: 'createWallet'}">
-        <i class="create-wallet-icon"></i>
+        <vIcon name="create-wallet-white"/>
         <span>Create Wallet</span>
       </vBtn>
       <vBtn :to="{name: 'importWallet'}">
-        <i class="import-wallet-icon"></i>
+        <vIcon name="import-wallet-blue"/>
         <span>Import Wallet</span>
       </vBtn>
     </div>
@@ -43,21 +43,5 @@ export default {
 .welcome-actions > * {
   margin: 0 25px;
   min-width: 200px;
-}
-
-.create-wallet-icon,
-.import-wallet-icon {
-  height: 14px;
-  width: 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.create-wallet-icon {
-  background-image: url("../../assets/image/create-wallet-white.svg");
-}
-
-.import-wallet-icon {
-  background-image: url("../../assets/image/import-wallet-blue.svg");
 }
 </style>

@@ -37,8 +37,8 @@ export default new Router({
       component: DownloadWallet
     },
     {
-      path: "/dashboard",
-      name: "dashboard",
+      path: "/my-assets",
+      name: "my-assets",
       component: MyAssets
     },
     {
