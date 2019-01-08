@@ -1,6 +1,6 @@
 <template>
   <div class="v-coin">
-    <div class="v-coin__icon" :class="[`coin-icon-${name}`]"></div>
+    <div class="coin-icon" :class="[`coin-icon-${name}`]"></div>
     <div class="v-coin__label">{{label}}</div>
   </div>
 </template>
