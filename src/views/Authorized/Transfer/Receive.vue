@@ -1,20 +1,25 @@
 <template>
-  <div class="transfer-receive">
-    <label class="label">FSN Receiving Address</label>
-    <input type="text" v-model="address" disabled class="input input-address">
+  <div>
+    <vTitle class="show-for-modal">Receive Assets</vTitle>
+    <div class="transfer-receive">
+      <label class="label">{{symbol.toUpperCase()}} Receiving Address</label>
+      <input type="text" v-model="address" disabled class="input input-address">
 
-    <div class="receive-actions">
-      <vBtn color="primary" @click="qrCode">
-        <vIcon name="qr-code"/>
-        <span>Show QR code</span>
-      </vBtn>
-      <vBtn color="primary-dark" @click="copy">
-        <vIcon name="copy"/>
-        <span>Copy clipboard</span>
-      </vBtn>
+      <div class="receive-actions">
+        <vBtn color="primary" @click="qrCode">
+          <vIcon name="qr-code"/>
+          <span>Show QR code</span>
+        </vBtn>
+        <vBtn color="primary-dark" @click="copy">
+          <vIcon name="copy"/>
+          <span>Copy clipboard</span>
+        </vBtn>
+      </div>
+
+      <div class="hide-for-modal">
+        <hr>
+      </div>
     </div>
-
-    <hr>
   </div>
 </template>
 
@@ -24,6 +29,12 @@ import QrCode from "./QrCode";
 
 export default {
   name: "TransferReceive",
+  props: {
+    symbol: {
+      type: String,
+      default: "fsn"
+    }
+  },
   computed: {
     address() {
       return this.$store.getters["wallet/address"] || "address";

@@ -1,7 +1,7 @@
 <template>
   <div class="v-coin">
-    <div class="coin-icon" :class="[`coin-icon-${name}`]"></div>
-    <div class="v-coin__label">{{label}}</div>
+    <div class="coin-icon" :class="[`coin-icon-${coin.symbol}`]"></div>
+    <div class="v-coin__label">{{coin.name}}</div>
   </div>
 </template>
 
@@ -9,26 +9,7 @@
 export default {
   name: "vCoin",
   props: {
-    name: String
-  },
-  data() {
-    return {
-      labels: {
-        btc: "Bitcoin (BTC)",
-        eth: "Ethereum (ETH)",
-        fsn: "FUSION (FSN)",
-        bnb: "Binance (BNB)",
-        mkr: "Maker (MKR)",
-        gusd: "Gemini Dollar (GUSD)",
-        ht: "HuobiToken (HT)",
-        bnt: "Bancor (BNT)"
-      }
-    };
-  },
-  computed: {
-    label() {
-      return this.labels[this.name];
-    }
+    coin: Object
   }
 };
 </script>

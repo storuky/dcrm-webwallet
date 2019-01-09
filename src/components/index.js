@@ -10,7 +10,9 @@ import vCoinsSelect from "./vCoinsSelect";
 import vContent from "./MainLayout/vContent";
 import vHeader from "./MainLayout/vHeader";
 import vFooter from "./MainLayout/vFooter";
+import vSelect from "vue-select";
 
+Vue.component("vSelect", vSelect);
 Vue.component("vIcon", vIcon);
 Vue.component("vTabs", vTabs);
 Vue.component("vContent", vContent);

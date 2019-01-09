@@ -41,7 +41,7 @@
             </td>
             <td class="table-actions w0">
               <vBtn color="default-dark" border size="small" @click="receive(coin.symbol)">Receive</vBtn>
-              <vBtn color="default-dark" border size="small" @click="send(coin.symdol)">Send</vBtn>
+              <vBtn color="default-dark" border size="small" @click="send(coin.symbol)">Send</vBtn>
             </td>
           </tr>
         </tbody>
@@ -57,17 +57,7 @@ export default {
   name: "MyAssets",
   data() {
     return {
-      query: "",
-      coins: [
-        { symbol: "fsn", name: "Fusion" },
-        { symbol: "btc", name: "Bitcoin" },
-        { symbol: "eth", name: "Ethereum" },
-        { symbol: "bnb", name: "Binance" },
-        { symbol: "mkr", name: "Maker" },
-        { symbol: "gusd", name: "Gemini Dollar" },
-        { symbol: "ht", name: "HuobiToken" },
-        { symbol: "bnt", name: "Bancor" }
-      ]
+      query: ""
     };
   },
   computed: {
@@ -79,6 +69,11 @@ export default {
         );
       });
     },
+    coins() {
+      return this.$store.getters["coins/all"];
+    }
+  },
+  methods: {
     receive(symbol) {
       this.$modal.show(
         Receive,

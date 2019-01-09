@@ -20,10 +20,10 @@
 <script>
 export default {
   name: "Welcome",
-  data() {
-    return {
-      coins: ["btc", "eth", "fsn", "bnb", "mkr", "gusd", "ht", "bnt"]
-    };
+  computed: {
+    coins() {
+      return this.$store.getters["coins/all"];
+    }
   }
 };
 </script>

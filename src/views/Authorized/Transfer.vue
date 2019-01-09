@@ -2,6 +2,9 @@
   <div class="transfer">
     <vTitle>
       <div>Receive / Send</div>
+      <div>
+        <vSelect label="symbol" value="symbol" v-model="coin" :options="coins"></vSelect>
+      </div>
     </vTitle>
     <div class="transfer__content">
       <vTabs :tabs="tabs" v-model="activeTab"></vTabs>
@@ -27,9 +30,15 @@ export default {
   },
   data() {
     return {
+      coin: "fsn",
       activeTab: 0,
       tabs: [{ name: "Receive" }, { name: "Send" }]
     };
+  },
+  computed: {
+    coins() {
+      return this.$store.getters["coins/all"];
+    }
   }
 };
 </script>

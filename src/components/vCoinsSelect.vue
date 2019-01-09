@@ -1,11 +1,11 @@
 <template>
   <div class="v-coins-select" :class="classes">
     <vCoin
-      :class="{active: coin === value}"
+      :class="{active: coin.symbol === (value || {}).symbol}"
       @click.native="setValue(coin)"
       v-for="coin in coins"
-      :key="coin"
-      :name="coin"
+      :key="coin.symbol"
+      :coin="coin"
     ></vCoin>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
       default: false
     },
     value: {
-      type: String,
+      type: Object,
       default: null
     }
   },

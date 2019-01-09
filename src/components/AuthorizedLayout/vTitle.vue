@@ -18,3 +18,9 @@
   word-spacing: 8px;
 }
 </style>
+
+<style>
+.v--modal .v-title {
+  padding: 0 25px;
+}
+</style>

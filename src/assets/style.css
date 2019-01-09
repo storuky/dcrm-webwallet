@@ -86,3 +86,56 @@ h3 {
   margin-bottom: 5px;
   display: block;
 }
+
+.v-select {
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.v-select .vs__actions > * {
+  display: none !important;
+}
+
+.v-select .vs__actions {
+  position: relative;
+}
+
+.v-select .vs__actions:before {
+  content: "";
+  height: 20px;
+  width: 1px;
+  background: #004a7c;
+  left: -32px;
+  top: 8px;
+  position: absolute;
+}
+
+.v-select .vs__actions:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid #004a7c;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+}
+
+.v-select .dropdown-toggle {
+  height: 40px;
+  border: 1px solid #004a7c !important;
+  border-radius: 0 !important;
+}
+
+.show-for-modal {
+  display: none;
+}
+
+.v--modal .show-for-modal {
+  display: block;
+}
+.v--modal .hide-for-modal {
+  display: none;
+}
