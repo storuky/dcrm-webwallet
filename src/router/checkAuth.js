@@ -12,6 +12,7 @@ const checkAuth = router => {
         });
       }
     } else {
+      store.dispatch("wallet/clear");
       next();
     }
   });
