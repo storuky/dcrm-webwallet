@@ -6,20 +6,26 @@ const store = {
   mutations: {
     set(state, wallet) {
       state.wallet = wallet;
+    },
+    clear(state) {
+      state.wallet = null;
     }
   },
   actions: {
     set({ commit }, wallet) {
       commit("set", wallet);
+    },
+    clear({ commit }) {
+      commit("clear");
     }
   },
   getters: {
     wallet(state) {
-      return {};
+      // return {};
       return state.wallet;
     },
     address(state) {
-      return "0x005352525fdsdfa234134da";
+      // return "0x005352525fdsdfa234134da";
       return state.wallet ? state.wallet.getChecksumAddressString() : null;
     },
     privateKey(state) {

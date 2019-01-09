@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <div class="welcome-actions">
+    <div class="welcome__actions">
       <vBtn color="primary" :to="{name: 'createWallet'}">
         <vIcon name="create-wallet-white"/>
         <span>Create Wallet</span>
@@ -12,7 +12,9 @@
     </div>
 
     <vCard title="Coins Supported">
-      <vCoinsSelect readonly :coins="coins"></vCoinsSelect>
+      <div class="welcome__coins-container">
+        <vCoinsSelect readonly :coins="coins"></vCoinsSelect>
+      </div>
     </vCard>
   </div>
 </template>
@@ -35,13 +37,18 @@ export default {
   padding-top: 60px;
 }
 
-.welcome-actions {
+.welcome__actions {
   display: flex;
   justify-content: center;
 }
 
-.welcome-actions > * {
+.welcome__actions > * {
   margin: 0 25px;
   min-width: 200px;
+}
+
+.welcome__coins-container {
+  max-width: 700px;
+  margin: auto;
 }
 </style>

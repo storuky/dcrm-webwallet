@@ -14,7 +14,7 @@
     <div class="header-action">
       <vIcon name="refresh"/>
     </div>
-    <div class="header-action">
+    <div class="header-action" @click="clearSession">
       <vIcon name="quit"/>
     </div>
   </div>
@@ -42,6 +42,10 @@ export default {
   methods: {
     copy() {
       copyToClp(this.address);
+    },
+    clearSession() {
+      this.$store.dispatch("wallet/clear");
+      this.$router.push("/");
     }
   }
 };

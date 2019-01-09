@@ -11,8 +11,8 @@
       <hr>
 
       <div class="transfer__tabs-content">
-        <Receive v-if="activeTab == 0"/>
-        <Send v-if="activeTab == 1"/>
+        <Receive :symbol="coin.symbol" v-if="activeTab == 0"/>
+        <Send :symbol="coin.symbol" v-if="activeTab == 1"/>
       </div>
     </div>
   </div>

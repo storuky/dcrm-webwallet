@@ -2,7 +2,7 @@
   <div>
     <vTitle class="show-for-modal">Send Assets</vTitle>
     <div class="transfer-send">
-      <label class="label">FSN Send Address</label>
+      <label class="label">{{symbol.toUpperCase()}} Send Address</label>
       <input type="text" v-model="address" class="input input-address">
       <br>
       <br>
@@ -23,6 +23,12 @@
 <script>
 export default {
   name: "TransferSend",
+  props: {
+    symbol: {
+      type: String,
+      default: "fsn"
+    }
+  },
   data() {
     return {
       address: "",
