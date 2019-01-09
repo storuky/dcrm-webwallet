@@ -131,14 +131,14 @@ h3 {
 }
 
 .show-for-modal {
-  display: none;
+  display: none !important;
 }
 
 .v--modal .show-for-modal {
-  display: block;
+  display: block !important;
 }
 .v--modal .hide-for-modal {
-  display: none;
+  display: none !important;
 }
 
 .v--modal .v-card {
