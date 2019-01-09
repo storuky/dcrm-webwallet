@@ -26,7 +26,11 @@ export default {
   },
   methods: {
     select() {
-      this.$modal.show(ImportWallet, {}, { scrollable: true, height: "auto" });
+      this.$modal.show(
+        ImportWallet,
+        {},
+        { scrollable: true, height: "auto", width: "800px" }
+      );
     }
   }
 };
