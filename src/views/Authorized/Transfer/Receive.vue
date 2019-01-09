@@ -1,6 +1,8 @@
 <template>
   <div>
-    <vTitle class="show-for-modal">Receive Assets</vTitle>
+    <div class="show-for-modal">
+      <vTitle>Receive Assets</vTitle>
+    </div>
     <div class="transfer-receive">
       <label class="label">{{symbol.toUpperCase()}} Receiving Address</label>
       <input type="text" v-model="address" disabled class="input input-address">

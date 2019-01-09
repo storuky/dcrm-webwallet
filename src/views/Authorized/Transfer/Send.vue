@@ -1,6 +1,8 @@
 <template>
   <div>
-    <vTitle class="show-for-modal">Send Assets</vTitle>
+    <div class="show-for-modal">
+      <vTitle>Send Assets</vTitle>
+    </div>
     <div class="transfer-send">
       <label class="label">{{symbol.toUpperCase()}} Send Address</label>
       <input type="text" v-model="address" class="input input-address">
