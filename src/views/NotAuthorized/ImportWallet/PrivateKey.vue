@@ -2,7 +2,7 @@
   <div class="pk">
     <h3>Paste Your Private Key</h3>
     <form class="form" @submit.stop.prevent="unlock">
-      <vInput v-model="privateKey" placeholder="Enter a Private Key" type="password"/>
+      <vInput ref="input" v-model="privateKey" placeholder="Enter a Private Key" type="password"/>
 
       <div class="pk__actions">
         <vBtn color="primary" v-if="privateKey">Unlock</vBtn>
@@ -20,6 +20,10 @@ export default {
     return {
       privateKey: null
     };
+  },
+  mounted() {
+    const input = this.$refs.input.$el.querySelector("input");
+    input.focus();
   },
   methods: {
     unlock() {

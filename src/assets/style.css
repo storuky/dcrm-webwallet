@@ -140,3 +140,8 @@ h3 {
 .v--modal .hide-for-modal {
   display: none;
 }
+
+.v--modal .v-card {
+  padding: 25px !important;
+  margin: 0 !important;
+}

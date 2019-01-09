@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import ImportWallet from "../NotAuthorized/ImportWallet";
+
 export default {
   name: "Lilo",
   data() {
@@ -24,7 +26,7 @@ export default {
   },
   methods: {
     select() {
-      console.log(this.selected);
+      this.$modal.show(ImportWallet, {}, { scrollable: true, height: "auto" });
     }
   }
 };
@@ -32,6 +34,6 @@ export default {
 
 <style scoped>
 .lilo-container {
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 </style>

@@ -12,6 +12,7 @@
         placeholder="Enter a password"
         type="password"
         v-if="passwordNeeded"
+        ref="input"
       />
       <div class="keystore__actions">
         <vBtn color="primary" v-if="password">Unlock</vBtn>
@@ -42,6 +43,11 @@ export default {
         this.fileData = onLoadEvent.currentTarget.result;
         this.passwordNeeded = Wallet.requirePass(this.fileData);
         this.password = "";
+
+        this.$nextTick(function() {
+          const input = this.$refs.input.$el.querySelector("input");
+          input.focus();
+        });
       };
       reader.readAsText(event.currentTarget.files[0]);
     },
